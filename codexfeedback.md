@@ -9,7 +9,9 @@
 - [x] Pino request logging and SPA fallback
 - [x] Hydro resilience adapters (HVI, BLR, Teleconnection)
 - [x] Tests and CI guardrails (CREP)
+- [x] Alignment capsule (config/alignment-capsule.yaml)
 
 ## Notes for Next Fraktal
 - Extend demo with live data sources
 - Hook hydro adapters into main server and dashboards
+- Explore hosting of docs_bundle.html (GitHub Pages)
