@@ -1,0 +1,16 @@
+name: Deploy Pages
+on:
+  push:
+    branches: [ main ]
+    paths: [ "public/**", "docs/**", "tools/**", "src/config/**" ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - run: npm ci || pnpm i
+      - run: npm run gallery:build || pnpm gallery:build
+      - run: npm run pages:bundle || true
+      - run: npx gh-pages -d public -u "github-actions-bot <bot@users.noreply.github.com>"

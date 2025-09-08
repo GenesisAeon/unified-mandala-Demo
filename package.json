@@ -19,7 +19,13 @@
     "nile:prometheus": "npm run nile:metrics &",
     "crep:nile:check": "node tools/governance/crep-guardrails.mjs && node -e \"console.log('🌊 Nil-Weisheit CREP-konform')\"",
     "sigillin:nile:validate": "node -e \"const msgs=['🌊','🔴','🟠','🟢','💧','🧯','🛰️','🫀','🏛️','⚠️','🚨']; msgs.forEach(s=>console.log('Sigil valid:',s)); console.log('✅ Nil-Weisheit Sigils validated')\"",
-    "test:qgw": "vitest run test/api.qgw.test.ts"
+    "test:qgw": "vitest run test/api.qgw.test.ts",
+    "gallery:build": "node tools/generate-sigil-gallery.mjs",
+    "pages:bundle": "node tools/docops/build-presentation.mjs",
+    "pages:deploy": "gh-pages -d public",
+    "postinstall": "node -e \"try{require('fs').mkdirSync('public/gallery',{recursive:true})}catch{}\"",
+    "ci:smoke": "node tools/smoke/healthz.mjs && node tools/smoke/kpis.mjs",
+    "demo:hydro": "node -e \"console.log('HVI/BLR/Tele live…');\""
   },
   "dependencies": {
     "dayjs": "^1.11.18",
@@ -35,11 +41,12 @@
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
-    "yaml": "^2.5.0",
+    "yaml": "^2.6.0",
     "concurrently": "^8.2.2",
     "prom-client": "^14.2.0",
     "vitest": "^1.6.0",
     "supertest": "^6.3.4",
-    "@types/supertest": "^2.0.12"
+    "@types/supertest": "^2.0.12",
+    "gh-pages": "^6.1.1"
   }
 }

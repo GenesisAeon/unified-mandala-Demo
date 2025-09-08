@@ -23,3 +23,4 @@ Holistisches, modulares Framework für symbolische KI, CREP-Logik und ethische A
 - ARCHITECTURE.md – Diagramme
 - GOVERNANCE.md – Ethik/Policies
 - AGENTS_WORKFLOW.md – Agenten & Runner
+- docs/PITCH.md – One-Pager
