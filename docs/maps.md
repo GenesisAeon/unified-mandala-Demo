@@ -3,9 +3,12 @@
 ## Repo
 ```mermaid
 graph TD;
-  core_api["core.api\nExpress API (health, ready, KPIs, CREP)"]
-  ui_lite["ui.lite\nStatic HTML UI (KPI-Karten, CREP-Badge)"]
-  ethics_policy["ethics.policy\nAI_POLICY runtime hook (very light)"]
+  core_api["core.api
+Express API (health, ready, KPIs, CREP)"]
+  ui_lite["ui.lite
+Static HTML UI (KPI-Karten, CREP-Badge)"]
+  ethics_policy["ethics.policy
+AI_POLICY runtime hook (very light)"]
   ui_lite -->|API| core_api
 
 ```
