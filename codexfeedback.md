@@ -10,8 +10,10 @@
 - [x] Hydro resilience adapters (HVI, BLR, Teleconnection)
 - [x] Tests and CI guardrails (CREP)
 - [x] Alignment capsule (config/alignment-capsule.yaml)
+- [x] Fraktal1 ledger entry (2025-09-08, sigil 🫀)
 
 ## Notes for Next Fraktal
+- Add Sigillin gallery and one-page pitch template
 - Extend demo with live data sources
 - Hook hydro adapters into main server and dashboards
 - Explore hosting of docs_bundle.html (GitHub Pages)
