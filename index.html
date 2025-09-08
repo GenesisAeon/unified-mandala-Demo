@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>UnifiedMandala • Landing</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 24px; line-height: 1.5; }
+    header { margin-bottom: 24px; }
+    .tag { display:inline-block; padding:2px 8px; border-radius:12px; border:1px solid #ccc; margin-right:6px; font-size:12px; }
+    details { border:1px solid #e5e7eb; border-radius:8px; padding:12px 16px; margin:12px 0; background:#fafafa; }
+    summary { font-weight:600; cursor:pointer; }
+    .grid { display:grid; gap:12px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    code, pre { background:#f6f7f9; border-radius:6px; padding:2px 6px; }
+    a { color:#0b70d1; text-decoration:none; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
+</head>
+<body>
+  <header>
+    <h1>🜂 UnifiedMandala – Präsentations-Start</h1>
+    <div>
+      <span class="tag">CREP</span>
+      <span class="tag">Sigillin</span>
+      <span class="tag">Agents</span>
+      <span class="tag">Governance</span>
+    </div>
+    <p>Leichtgewichtig. Menschenfreundlich. Präsentationsbereit.</p>
+  </header>
+
+  <div class="grid">
+    <details open>
+      <summary>TL;DR (60 Sekunden)</summary>
+      <ul>
+        <li><strong>HANDBUCH.md</strong>: „Erste 30 Minuten“</li>
+        <li>Start: <code>pnpm install && pnpm dev</code> (oder <code>docker compose up</code>)</li>
+        <li>Architektur: <a href="ARCHITECTURE.md">ARCHITECTURE.md</a></li>
+      </ul>
+    </details>
+
+    <details><summary>Was ist CREP?</summary>
+      <p>Coherence, Resonance, Emergence, Poetics – vier Linsen für Sinn & Wirkung.</p>
+    </details>
+
+    <details><summary>Sigillin – symbolische Anker</summary>
+      <p>Konfiguration + Rituale + Trigger + Verknüpfungen – in einer verständlichen Form.</p>
+    </details>
+
+    <details><summary>Agenten & EventBus</summary>
+      <p>NATS/Memory, Personhood-Gates (P0–P3), Schema-Validation, Reports.</p>
+    </details>
+
+    <details><summary>Governance/Ethik</summary>
+      <p>YAML-Policies, Guardrails (CI), Issue-Verlinkung, Release-Notes.</p>
+    </details>
+  </div>
+
+  <h2>Architekturdiagramm</h2>
+  <div class="mermaid">
+graph TD
+  subgraph UI
+    A[MandalaNetworkView] --> B[Sigil Viewer]
+    A --> C[CREP Charts]
+  end
+  subgraph Core
+    D[CREP Engine]
+    E[Sigillin Core]
+    F[Memory Governance]
+  end
+  subgraph Agents_Bus
+    G[NATS / Memory Bus]
+    H[Runner & Reports]
+    I[Personhood Gates P0–P3]
+  end
+  subgraph DocOps
+    J[LLM Orchestration]
+    K[Guardrails/CI]
+  end
+  B --> E
+  C --> D
+  D --> G
+  E --> G
+  G --> H
+  I --> G
+  H --> J
+  J --> K
+  K --> G
+  </div>
+</body>
+</html>

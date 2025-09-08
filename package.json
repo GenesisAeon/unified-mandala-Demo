@@ -1,0 +1,14 @@
+{
+  "name": "unifiedmandala-lite",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "maps:all": "node tools/maps-all.mjs",
+    "docs:bundle": "node tools/docops/build-presentation.mjs"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "yaml": "^2.5.1"
+  }
+}

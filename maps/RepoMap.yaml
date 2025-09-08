@@ -1,0 +1,12 @@
+name: UnifiedMandala Lite
+modules:
+  - id: core.api
+    desc: Express API (health, ready, KPIs, CREP)
+  - id: ui.lite
+    desc: Static HTML UI (KPI-Karten, CREP-Badge)
+  - id: ethics.policy
+    desc: AI_POLICY runtime hook (very light)
+links:
+  - from: ui.lite
+    to: core.api
+    via: http://localhost:3000
