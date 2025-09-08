@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { hydroResilienceRouter } from './routes/hydro-resilience.ts';
+import { hydroResilienceRouter } from './hydro-resilience.ts';
 
 const app = express();
 app.use(cors());

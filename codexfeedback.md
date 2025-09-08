@@ -22,6 +22,9 @@
 - [x] QGW Dataset erweitert (seeds/qgw.json)
 - [x] GitHub Pages Deploy & Docs-Bundle Hook
 - [x] CI Smoke-Tests (Healthz + KPIs)
+- [x] Hydro-resilience GET router & API wiring
+- [x] Metrics dev script with Prometheus /metrics
+- [x] Program flow diagram & release gate docs
 
 ## Notes for Next Fraktal
 - Live data sources (NOAA/USGS)
