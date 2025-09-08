@@ -1,0 +1,28 @@
+# Konfigurierbare Leitplanken für CREP & Ethik
+sigils: ["🌀","🔥","❄️","🌿","🧯","🟢","🟠","🔴","🫀"]
+valid_intents: ["query","assert","ritual"]
+kpi_sigils_required: true
+major_bump_requires_docs: true
+
+# Soft/Hard-Fail-Strategie
+mode: "soft"  # "soft" | "hard" | "auto"
+fail_on_severity_at_least: "high"  # high|medium|low (nur relevant, wenn mode=auto)
+
+# Pfad-Filter
+ignore:
+  paths:
+    - "docs/**"
+    - "**/*.md"
+
+# Schweregrade je Regelgruppe
+severity:
+  CREP: medium
+  Ethics: high
+  Sigillin: high
+  Naming: low
+
+# Git-Diff-Ermittlung (CI/PR/Local)
+diff:
+  strategy: "auto"   # auto|base..head|HEAD~1..HEAD
+  baseEnv: "GITHUB_BASE_REF"
+  headEnv: "GITHUB_SHA"
