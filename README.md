@@ -11,6 +11,15 @@ Holistisches, modulares Framework für symbolische KI, CREP-Logik und ethische A
 - Architektur: **ARCHITECTURE.md** (Mermaid)
 - Governance: **GOVERNANCE.md** (Personhood P0–P3, Guardrails)
 
+### Start (lokal)
+```bash
+pnpm install
+pnpm start
+```
+API testen: `/api/kpi/list`, `/api/crep/resonance`, `/api/hydro/hvi/Nile`
+
+![UI Preview](docs/demo/ui-home.svg)
+
 ## Kernideen
 - **CREP**: Coherence, Resonance, Emergence, Poetics (0–1) → Priorisierung & Reflexion
 - **Sigillin**: symbolische Anker (Konfigs, Rituale, Trigger)
@@ -24,3 +33,5 @@ Holistisches, modulares Framework für symbolische KI, CREP-Logik und ethische A
 - GOVERNANCE.md – Ethik/Policies
 - AGENTS_WORKFLOW.md – Agenten & Runner
 - docs/PITCH.md – One-Pager
+- docs/demo/RELEASE-GATE.md – Demo-Checklist
+- docs/ProgramFlow.svg – Program-Flow

@@ -2,9 +2,11 @@
   "name": "unifiedmandala-lite",
   "private": true,
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js",
+    "start": "node scripts/server.mjs",
+    "dev": "concurrently \"node --watch scripts/server.mjs\" \"npm run metrics:serve\"",
+    "metrics:serve": "node tools/metrics/patch-metrics.mjs || true && node tools/metrics/nile-wisdom-metrics.mjs",
     "maps:all": "node tools/maps-all.mjs",
+    "mmd:render": "node tools/render-mermaid.mjs",
     "docs:bundle": "node tools/docops/build-presentation.mjs",
     "guardrails:check": "node tools/governance/crep-guardrails.mjs",
     "guardrails:hard": "CREP_GUARDRAILS_MODE=hard node tools/governance/crep-guardrails.mjs",

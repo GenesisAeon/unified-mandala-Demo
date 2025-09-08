@@ -11,6 +11,13 @@ Ein Framework, das **symbolische Interaktion (Sigillin)**, **CREP-Logik** und **
 3. **Quickstart** ausführen (siehe QUICKSTART.md).
 4. Wenn vorhanden: **Report** ansehen (`runs/<ts>/report.html`).
 
+## Start (lokal)
+```bash
+pnpm install
+pnpm start
+```
+Teste `/api/kpi/list` und `/api/crep/resonance`.
+
 ## CREP in 4 Sätzen
 - **Coherence** = Stimmigkeit, **Resonance** = Bezug/Schwingung,
 - **Emergence** = neues Verhalten, **Poetics** = Sinn & Verständlichkeit.
