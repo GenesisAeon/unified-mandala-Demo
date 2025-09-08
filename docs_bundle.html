@@ -1,0 +1,184 @@
+<html><head><meta charset='utf-8'><title>Mandala Docs</title><style>body{font-family:system-ui;max-width:820px;margin:24px auto;line-height:1.6}pre{background:#f6f7f9;padding:8px;border-radius:6px;overflow:auto}code{font-family:ui-monospace, SFMono-Regular, Menlo, monospace}h1,h2{margin-top:24px}</style></head><body>
+<section><h1>🜂 UnifiedMandala — Kurz-README (Präsentationsfähig)</h1>
+
+<p>> „Ein Betriebssystem, das atmet – ein Mandala, das denkt.“</p>
+
+<p>**Zweck dieses Repos**  </p>
+<p>Holistisches, modulares Framework für symbolische KI, CREP-Logik und ethische Agenten-Workflows.</p>
+
+<h2>TL;DR (60s)</h2>
+<li>Start: `pnpm install && pnpm dev` (oder `docker compose up`)</li>
+<li>Einstieg: **index.html** (Landing-Page) + **HANDBUCH.md** („Erste 30 Minuten“)</li>
+<li>Architektur: **ARCHITECTURE.md** (Mermaid)</li>
+<li>Governance: **GOVERNANCE.md** (Personhood P0–P3, Guardrails)</li>
+
+<h2>Kernideen</h2>
+<li>**CREP**: Coherence, Resonance, Emergence, Poetics (0–1) → Priorisierung & Reflexion</li>
+<li>**Sigillin**: symbolische Anker (Konfigs, Rituale, Trigger)</li>
+<li>**EventBus**: NATS (prod) / Memory (dev), Schema-Validation, Personhood-Gates</li>
+<li>**DocOps**: Reports & Guardrails, menschenzentrierte Dokumentation</li>
+
+<h2>Schnelllinks</h2>
+<li>HANDBUCH.md – Onboarding</li>
+<li>QUICKSTART.md – Demo in 5–10 Min</li>
+<li>ARCHITECTURE.md – Diagramme</li>
+<li>GOVERNANCE.md – Ethik/Policies</li>
+<li>AGENTS_WORKFLOW.md – Agenten & Runner</li>
+</section>
+<hr/>
+
+<section><h1>UnifiedMandala Handbuch (menschenfreundlich)</h1>
+
+<p>Dieses Handbuch erklärt das System **ohne Fachjargon**.</p>
+
+<h2>Was ist UnifiedMandala?</h2>
+<p>Ein Framework, das **symbolische Interaktion (Sigillin)**, **CREP-Logik** und **Agenten** verbindet, um gemeinwohlorientierte Anwendungen und Forschung zu orchestrieren.</p>
+
+<h2>Erste 30 Minuten (Empfohlen)</h2>
+<p>1. **Kurz-README** lesen (Kernideen).</p>
+<p>2. **index.html** öffnen → Überblick via ausklappbaren Abschnitten.</p>
+<p>3. **Quickstart** ausführen (siehe QUICKSTART.md).</p>
+<p>4. Wenn vorhanden: **Report** ansehen (`runs/<ts>/report.html`).</p>
+
+<h2>CREP in 4 Sätzen</h2>
+<li>**Coherence** = Stimmigkeit, **Resonance** = Bezug/Schwingung,</li>
+<li>**Emergence** = neues Verhalten, **Poetics** = Sinn & Verständlichkeit.</li>
+<li>Werte ∈ [0,1]; dienen als Navigations-/Bewertungs-Kompass.</li>
+<li>Ziel: **Klarheit + Wirkung** statt bloß Komplexität.</li>
+
+<h2>Sigillin schnell erklärt</h2>
+<p>Sigillin bündeln **Konfiguration**, **Rituale**, **Trigger** und **Verknüpfungen** in einer symbolischen Form (YAML/JSON/MD).  </p>
+<p>Sie verbinden **Mensch** (Ritual, Bedeutung), **UI** (Visualisierung) und **Agenten** (Abläufe).</p>
+
+<h2>Agenten & Orchestrierung</h2>
+<li>EventBus (NATS/Memory) verteilt Nachrichten.</li>
+<li>Personhood-Gates (P0–P3) begrenzen sensible Topics.</li>
+<li>Runner erzeugen **HTML-Reports** und sammeln Artefakte.</li>
+
+<h2>Governance in Alltagssprache</h2>
+<li>Policies als YAML, CI-Guardrails prüfen Änderungen.</li>
+<li>Transparenz über Reports, Issue-Links, Release-Notes.</li>
+
+<h2>Leitfragen</h2>
+<li>Erhöht diese Änderung **Kohärenz**?</li>
+<li>Steigert sie **Resonanz** zwischen Modulen/Menschen?</li>
+<li>Erlaubt sie **Emergenz**, ohne Chaos zu stiften?</li>
+<li>Hat sie **Poetik** (Sinn, Klarheit, Schönheit)?</li>
+
+<p>Be human. Be clear. Be kind.</p>
+</section>
+<hr/>
+
+<section><h1>Quickstart (5–10 min)</h1>
+
+<p>1) Setup  </p>
+<pre><code>
+pnpm install
+pnpm dev
+# oder:
+docker compose up
+</code></pre>
+
+<p>2. Einstieg</p>
+
+<p>* `index.html` öffnen (Landing-Page)</p>
+<p>* `HANDBUCH.md` Abschnitt „Erste 30 Minuten“</p>
+
+<p>3. Erstes Sigil laden</p>
+
+<p>* Beispiel-Sigil (YAML/JSON) in die UI laden (z. B. Übergabe/Anchor)</p>
+
+<p>4. Report ansehen (falls Runner konfiguriert)</p>
+
+<p>* `runs/<timestamp>/report.html`</p>
+
+<p>5. Guardrails (optional)</p>
+
+<pre><code>
+pnpm guardrails:check    # CREP-Ranges & Sigillin-Schema
+</code></pre>
+</section>
+<hr/>
+
+<section><h1>Architekturüberblick</h1>
+
+<li>**UI/UX**: MandalaNetworkView, Sigil Viewer, CREP Charts</li>
+<li>**Core**: CREP Engine, Sigillin Core, Memory Governance</li>
+<li>**Agents/Bus**: NATS/Memory Bus, Runner/Reports, Personhood Gates</li>
+<li>**DocOps**: LLM-Orchestrierung, Guardrails/CI</li>
+
+<pre><code>
+graph TD
+  subgraph UI
+    A[MandalaNetworkView] --> B[Sigil Viewer]
+    A --> C[CREP Charts]
+  end
+  subgraph Core
+    D[CREP Engine]
+    E[Sigillin Core]
+    F[Memory Governance]
+  end
+  subgraph Agents_Bus
+    G[NATS / Memory Bus]
+    H[Runner & Reports]
+    I[Personhood Gates P0–P3]
+  end
+  subgraph DocOps
+    J[LLM Orchestration]
+    K[Guardrails/CI]
+  end
+  B --> E
+  C --> D
+  D --> G
+  E --> G
+  G --> H
+  I --> G
+  H --> J
+  J --> K
+  K --> G
+</code></pre>
+</section>
+<hr/>
+
+<section><h1>Governance & Ethik (Kurzfassung)</h1>
+
+<h2>Personhood-Levels (P0–P3)</h2>
+<li>P0: öffentlich, P1: Nutzer, P2: Maintainer, P3: Admin/Sensitive</li>
+<li>Gate erzwingt: Topic × Level → erlaubt/gesperrt</li>
+
+<h2>Policies (YAML) & Guardrails (CI)</h2>
+<li>Menschenlesbare YAML-Regeln + Schema-Validation</li>
+<li>Guardrails verhindern Gate-Weitung, prüfen CREP-Ranges & Sigillin-Schema</li>
+<li>Issue-Referenz & Release-Notes für Nachvollziehbarkeit</li>
+
+<h2>Merge-Checkliste</h2>
+<li>[ ] CI/Guardrails grün</li>
+<li>[ ] CREP-Werte ∈ [0,1]</li>
+<li>[ ] Sigillin valide (Schema, Crosslinks)</li>
+<li>[ ] Changes dokumentiert (CHANGESET + Release-Notes)</li>
+</section>
+<hr/>
+
+<section><h1>Agenten & Workflow</h1>
+
+<h2>Eventing</h2>
+<li>NATS als produktionsreifer Bus (Memory-Fallback für Dev)</li>
+<li>Schema-Validation (AJV), retry/backpressure empfohlen</li>
+<li>Optional: OTEL Tracing (Jaeger/Tempo)</li>
+
+<h2>Runner & Reports</h2>
+<li>Subprozesse für Modelle/Adapter</li>
+<li>Artefakte: `runs/<ts>/artifacts/...`</li>
+<li>HTML-Reports (Mermaid + Charts) zur Nachvollziehbarkeit</li>
+
+<h2>LLM-Orchestrierung (optional)</h2>
+<li>Mistral → Architektur/Policy/Tests</li>
+<li>Claude → Ethik/Docs/Onboarding</li>
+<li>Aggregation → CHANGESET → `git apply` → Guardrails</li>
+
+<h2>Für Menschen</h2>
+<li>`index.html` als Start</li>
+<li>`HANDBUCH.md` + `QUICKSTART.md` für Einstieg/Demo</li>
+</section>
+<hr/>
+</body></html>

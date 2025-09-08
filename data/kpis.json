@@ -1,0 +1,32 @@
+[
+  {
+    "id": "era5_temp_anomaly",
+    "label": "ERA5 Temperatur-Anomalie",
+    "value": 0.42,
+    "unit": "°C",
+    "sigil": "🌡️",
+    "status": "ok",
+    "thresholds": { "warn": 0.8, "alarm": 1.2 },
+    "lastUpdated": "2025-09-08T09:00:00Z"
+  },
+  {
+    "id": "wildfire_risk",
+    "label": "Waldbrand-Risiko (EFFIS proxy)",
+    "value": 0.27,
+    "unit": "risk",
+    "sigil": "🔥",
+    "status": "ok",
+    "thresholds": { "warn": 0.5, "alarm": 0.75 },
+    "lastUpdated": "2025-09-08T09:00:00Z"
+  },
+  {
+    "id": "groundwater_level",
+    "label": "Grundwasserstand (Index)",
+    "value": -0.15,
+    "unit": "σ",
+    "sigil": "💧",
+    "status": "ok",
+    "thresholds": { "warn": -0.6, "alarm": -1.0 },
+    "lastUpdated": "2025-09-08T09:00:00Z"
+  }
+]

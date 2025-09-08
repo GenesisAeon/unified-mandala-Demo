@@ -1,0 +1,9 @@
+flow:
+  - step: "Beacon heartbeat"
+    emits: "🫀"
+    cadence_sec: 12
+  - step: "Fetch CREP & KPIs"
+    ui: "index.html"
+    api: ["/api/crep/resonance", "/api/kpi/list"]
+  - step: "Display badges"
+    mapping: { ">=0.7": "🟢", ">=0.4": "🟠", "<0.4": "🔴" }

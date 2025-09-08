@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UnifiedMandala Lite</title>
+  <style>
+    :root { --bg:#0b0d10; --card:#151a21; --fg:#e9eef5; --muted:#9db0c5; }
+    * { box-sizing: border-box; font-family: system-ui, sans-serif; }
+    body { background: var(--bg); color: var(--fg); margin: 0; padding: 24px; }
+    h1 { margin: 0 0 8px 0; font-size: 22px; }
+    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card { background: var(--card); border-radius: 14px; padding: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+    .kpi { display:flex; align-items:center; justify-content:space-between; }
+    .muted { color: var(--muted); font-size: 12px; }
+    .badge { font-size: 20px; }
+    .sigil { font-size: 24px; }
+    .ok { color: #5cff96; } .warn { color:#ffd36b; } .alarm { color:#ff6b6b; }
+    footer { margin-top: 16px; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>🌀 UnifiedMandala Lite</h1>
+  <div id="crep" class="card"></div>
+  <div id="kpis" class="grid"></div>
+  <footer>
+    <span id="status" class="muted"></span>
+  </footer>
+
+  <script>
+    async function loadJSON(u){ const r=await fetch(u); return r.json(); }
+
+    function badge(sig){ return sig === "🟢" ? '<span class="badge ok">🟢 OK</span>' :
+                               sig === "🟠" ? '<span class="badge warn">🟠 WARN</span>' :
+                                              '<span class="badge alarm">🔴 ALARM</span>'; }
+
+    async function render() {
+      const hz = await (await fetch('/healthz')).json();
+      const rz = await (await fetch('/readyz')).json();
+      document.getElementById('status').textContent =
+        `healthz: ${hz.ok ? 'ok' : 'fail'} • readyz: ${rz.ready ? 'ready' : 'not ready'} • policy=${hz.policy_sha}`;
+
+      const crep = await loadJSON('/api/crep/resonance');
+      document.getElementById('crep').innerHTML =
+        `<div class="kpi"><div><div class="muted">CREP Resonanz</div>
+          <div style="font-size:14px">C ${crep.coherence} • R ${crep.resonance} • E ${crep.emergence} • P ${crep.poetics}</div>
+        </div><div>${badge(crep.sigil)}</div></div>
+        <div class="muted">score=${crep.score} • ${crep.note || ''}</div>`;
+
+      const kpis = (await loadJSON('/api/kpi/list')).items;
+      document.getElementById('kpis').innerHTML = kpis.map(k =>
+        `<div class="card">
+           <div class="kpi">
+             <div>
+               <div class="muted">${k.id}</div>
+               <div>${k.label}</div>
+             </div>
+             <div class="sigil" title="${k.sigil}">${k.sigil}</div>
+           </div>
+           <div style="margin-top:6px;display:flex;justify-content:space-between;align-items:center;">
+             <div>${k.value} ${k.unit}</div>
+             <div class="${k.status}">${k.status.toUpperCase()}</div>
+           </div>
+           <div class="muted" style="margin-top:6px;">updated ${k.lastUpdated}</div>
+         </div>`
+      ).join('');
+    }
+    render(); setInterval(render, 15000);
+  </script>
+</body>
+</html>
