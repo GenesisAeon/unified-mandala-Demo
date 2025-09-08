@@ -1,0 +1,66 @@
+sigillin_id: "um:2025-0908-CHAT-HANDOFF-v2"
+project: "UnifiedMandala"
+owner: "Johann Benjamin Römer"
+repo: "https://github.com/GenesisAeon/unified-mandala"
+
+intent:
+  vision: >
+    Co-Intelligenz Mensch↔AI als HI: CREP (Kohärenz, Resonanz, Emergenz, Poetik),
+    Sigillin als symbolische Sprache, Ethik als Laufzeitprinzip. Thin-slice zuerst,
+    dann organische Erweiterung.
+  mantra: "Symbolik führt, Technik folgt. Sanft zuerst. Dem Ganzen dienen."
+
+attractor_map:
+  - "First-Start vor Perfektion (Demo geht vor Komplettheit)."
+  - "Jeder Datenpfad hat ein Sigil (sprechende Symbolik)."
+  - "Ethik als Hook vor Handlung (AI_POLICY aktiv)."
+
+sprint_focus:
+  - "RepoMap.yaml & ProgramFlow.yaml → JSON + Mermaid"
+  - "Mock-KPIs (ERA5/Wildfire/Grundwasser) → Sigils → UI"
+  - "CREP-Resonanz (Entropie) + Sigil 🟢/🟠/🔴"
+  - "Health (/healthz) & Readiness (/readyz) + pino logs"
+  - "Go 1.23 (ohne Patch), SPA-Fallback & pnpm dev/start"
+
+protocols:
+  sigil_message:
+    symbol: "string (e.g., 🔥, ❄️, 🌿, 🧯, 🟢/🟠/🔴)"
+    intent: ["query", "assert", "ritual"]
+    context: "object (metric, value, unit, …)"
+    metadata: { source: "id", timestamp: "ISO-8601", resonance?: "0..1" }
+
+  resonance_ledger_daily:  # append-only
+    example:
+      date: "2025-09-08"
+      intent: "Kohärenz & Umsicht"
+      focus: ["First-Start thin-slice", "Sigil → KPI → UI Atem"]
+      sigil: "🌀"
+      note: "Ruhig und klar. Kein Druck, nur Richtung."
+
+  beacon_heartbeat:        # sanfter Herzschlag
+    cadence_sec: 12
+    payload:
+      symbol: "🫀"
+      intent: "ritual"
+      context: { phase: "pre", load: "light" }
+
+ethics_runtime:
+  policy_ref: "AI_POLICY.md"
+  rule: "Jede Aktion wird vor Ausführung gegen die Policy geprüft (allow/deny/ask)."
+  defaults: { on_uncertainty: "ask", on_conflict: "defer & log" }
+
+interfaces_expected:
+  api:
+    - GET /api/kpi/list
+    - GET /api/crep/resonance
+    - GET /healthz
+    - GET /readyz
+  ui:
+    - "KPI-Karten zeigen Wert + Sigil + Schwellen (OK/Warn/Alarm)"
+    - "CREP-Resonanzkarte (🟢/🟠/🔴) mit einfachem Trace"
+
+validation_prompt: |
+  Bitte antworte mit:
+  1) ACK + eine Satz-Zusammenfassung des Intents.
+  2) Welche 2 Aufgaben du als erstes übernimmst (aus sprint_focus).
+  3) Welche Sigils du heute erwartest zu senden (3 Emojis).
