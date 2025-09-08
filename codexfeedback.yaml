@@ -11,10 +11,14 @@ status:
   hydro_diagram: done
   prometheus_metrics: done
   qgw_demo_tile: done
+  hydro_integration: done
+  sigillin_gallery: done
+  pitch_one_pager: done
+  qgw_dataset_extended: done
+  pages_deploy: done
+  ci_smokes: done
 next:
-  - expand_qgw_dataset
-  - sigillin_gallery
   - live_data_sources
-  - hook_adapters_to_dashboard
-  - host_docs_bundle
-  - surface_metrics_dashboard
+  - mini_metrics_dashboard
+  - docs_bundle_refine
+  - qgw_dashboard_integration

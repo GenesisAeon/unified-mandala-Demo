@@ -1,0 +1,16 @@
+{
+  "status": {
+    "hydro_integration": "done",
+    "sigillin_gallery": "done",
+    "pitch_one_pager": "done",
+    "qgw_dataset_extended": "done",
+    "pages_deploy": "done",
+    "ci_smokes": "done"
+  },
+  "next": [
+    "live_data_sources",
+    "mini_metrics_dashboard",
+    "docs_bundle_refine",
+    "qgw_dashboard_integration"
+  ]
+}

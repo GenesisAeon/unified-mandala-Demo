@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "tiles": [
+    { "id":"qgw-1", "name":"Groundwater Sentinel", "sigil":"🧭", "status":"beta" },
+    { "id":"qgw-2", "name":"Reservoir Watch", "sigil":"💧", "status":"beta" }
+  ]
+}

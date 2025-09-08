@@ -16,11 +16,15 @@
 - [x] Alignment capsule (config/alignment-capsule.yaml)
 - [x] Fraktal1 ledger entry (2025-09-08, sigil 🫀)
 - [x] QGW demo tile (seeds, API, UI, smoke test)
+- [x] Hydro adapters im Hauptserver & UI verdrahtet
+- [x] Sigillin Gallery mit Generator
+- [x] One-Pager Pitch (docs/PITCH.md)
+- [x] QGW Dataset erweitert (seeds/qgw.json)
+- [x] GitHub Pages Deploy & Docs-Bundle Hook
+- [x] CI Smoke-Tests (Healthz + KPIs)
 
 ## Notes for Next Fraktal
-- Expand QGW dataset and integrate with dashboards
-- Add Sigillin gallery and one-page pitch template
-- Extend demo with live data sources
-- Hook hydro adapters into main server and dashboards
-- Explore hosting of docs_bundle.html (GitHub Pages)
-- Surface metrics on a simple dashboard and add CI hooks
+- Live data sources (NOAA/USGS)
+- Mini-Metrics-Dashboard ausbauen
+- Docs Bundle weiter verfeinern
+- Weitere QGW Tiles & Dashboard-Integration

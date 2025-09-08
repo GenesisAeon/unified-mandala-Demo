@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>UnifiedMandala Lite</title>
+  <link rel="stylesheet" href="/css/styles.css" />
   <style>
     :root { --bg:#0b0d10; --card:#151a21; --fg:#e9eef5; --muted:#9db0c5; }
     * { box-sizing: border-box; font-family: system-ui, sans-serif; }
@@ -23,49 +24,19 @@
   <h1>🌀 UnifiedMandala Lite</h1>
   <div id="crep" class="card"></div>
   <div id="kpis" class="grid"></div>
+  <section id="hydro-tile" class="tile">
+    <h2>Hydro-Resilience (HVI/BLR/Tele)</h2>
+    <div id="hydro-kpis" class="kpi-grid"></div>
+  </section>
+  <section class="tile">
+    <h2>Sigillin Gallery</h2>
+    <a href="/gallery/index.html">öffnen →</a>
+  </section>
   <footer>
     <span id="status" class="muted"></span>
   </footer>
 
-  <script>
-    async function loadJSON(u){ const r=await fetch(u); return r.json(); }
-
-    function badge(sig){ return sig === "🟢" ? '<span class="badge ok">🟢 OK</span>' :
-                               sig === "🟠" ? '<span class="badge warn">🟠 WARN</span>' :
-                                              '<span class="badge alarm">🔴 ALARM</span>'; }
-
-    async function render() {
-      const hz = await (await fetch('/healthz')).json();
-      const rz = await (await fetch('/readyz')).json();
-      document.getElementById('status').textContent =
-        `healthz: ${hz.ok ? 'ok' : 'fail'} • readyz: ${rz.ready ? 'ready' : 'not ready'} • policy=${hz.policy_sha}`;
-
-      const crep = await loadJSON('/api/crep/resonance');
-      document.getElementById('crep').innerHTML =
-        `<div class="kpi"><div><div class="muted">CREP Resonanz</div>
-          <div style="font-size:14px">C ${crep.coherence} • R ${crep.resonance} • E ${crep.emergence} • P ${crep.poetics}</div>
-        </div><div>${badge(crep.sigil)}</div></div>
-        <div class="muted">score=${crep.score} • ${crep.note || ''}</div>`;
-
-      const kpis = (await loadJSON('/api/kpi/list')).items;
-      document.getElementById('kpis').innerHTML = kpis.map(k =>
-        `<div class="card">
-           <div class="kpi">
-             <div>
-               <div class="muted">${k.id}</div>
-               <div>${k.label}</div>
-             </div>
-             <div class="sigil" title="${k.sigil}">${k.sigil}</div>
-           </div>
-           <div style="margin-top:6px;display:flex;justify-content:space-between;align-items:center;">
-             <div>${k.value} ${k.unit}</div>
-             <div class="${k.status}">${k.status.toUpperCase()}</div>
-           </div>
-           <div class="muted" style="margin-top:6px;">updated ${k.lastUpdated}</div>
-         </div>`
-      ).join('');
-    }
-    render(); setInterval(render, 15000);
-  </script>
+  <script src="/js/app.js"></script>
+  <script src="/js/hydro.js"></script>
 </body>
 </html>
