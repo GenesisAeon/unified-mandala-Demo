@@ -1,0 +1,15 @@
+sigils:
+  HVI:
+    green: "🟢"
+    orange: "🟠"
+    red: "🔴"
+  BLR:
+    ok: "💧"
+    deficit: "🧯"
+  Tele:
+    remote: "🛰️"
+  Stress:
+    low: "🏛️"
+    medium: "⚠️"
+    high: "🚨"
+  Beacon: "🫀"

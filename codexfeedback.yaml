@@ -1,0 +1,16 @@
+status:
+  presentation_pack: done
+  express_server: done
+  static_ui: done
+  maps_generator: done
+  policy_hook: done
+  pino_logging: done
+  hydro_adapters: done
+  institutional_stress: done
+  prometheus_metrics: done
+next:
+  - sigillin_gallery
+  - live_data_sources
+  - hook_adapters_to_dashboard
+  - host_docs_bundle
+  - surface_metrics_dashboard
