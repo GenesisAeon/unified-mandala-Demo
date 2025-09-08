@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bmv-feasibility-2024",
+    "title": "Feasible gravity-induced entanglement (optomech)",
+    "doi": "10.1103/PhysRevD.110.024057",
+    "lab": "—",
+    "axis": "BMV",
+    "evidence": "peer-reviewed",
+    "kpis": { "ST": 1, "Q": 1, "decoMargin_dB": 0.0, "witness": null },
+    "forks": {
+      "H1": "QG-entangling",
+      "H0": "classical-mediator",
+      "discriminator": "Bell/Witness unter lokalen Messungen"
+    },
+    "sigils": ["🪶","🎚️"],
+    "updated": "2025-09-08T12:00:00Z"
+  },
+  {
+    "id": "rmp-qinfo-qg-2025",
+    "title": "Quantum-information methods for quantum gravity (Review)",
+    "doi": "10.1103/RevModPhys.97.015006",
+    "lab": "—",
+    "axis": "BMV",
+    "evidence": "peer-reviewed",
+    "kpis": {},
+    "forks": { "H1": "QG-entangling", "H0": "classical-mediator", "discriminator": null },
+    "sigils": ["⚖️"],
+    "updated": "2025-09-08T12:00:00Z"
+  },
+  {
+    "id": "holometer-legacy",
+    "title": "Holometer (holographic noise) – legacy",
+    "doi": null,
+    "lab": "Fermilab",
+    "axis": "Holography",
+    "evidence": "running",
+    "kpis": {},
+    "forks": { "H1": "QG-entangling", "H0": "classical-mediator", "discriminator": "holographic noise bounds" },
+    "sigils": ["📡","⚖️"],
+    "updated": "2025-09-08T12:00:00Z"
+  }
+]

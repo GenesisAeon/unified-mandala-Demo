@@ -10,7 +10,9 @@ status:
   sigil_mappings: done
   hydro_diagram: done
   prometheus_metrics: done
+  qgw_demo_tile: done
 next:
+  - expand_qgw_dataset
   - sigillin_gallery
   - live_data_sources
   - hook_adapters_to_dashboard
