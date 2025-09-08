@@ -11,10 +11,10 @@
     "guardrails:auto": "CREP_GUARDRAILS_MODE=auto CREP_FAIL_ON=medium node tools/governance/crep-guardrails.mjs",
     "test": "node --test",
     "nile:metrics": "node tools/metrics/nile-wisdom-metrics.mjs",
-    "nile:hvi": "node -e \"import('./src/adapters/hydro-resilience/hvi-adapter.ts').then(m => new m.HydroVarianceAdapter().getHVI('Nile-Delta').then(console.log))\"",
-    "nile:blr": "node -e \"import('./src/adapters/hydro-resilience/blr-adapter.ts').then(m => new m.BufferLoadAdapter().getBLR('groundwater','Fayyum-Analogue').then(console.log))\"",
-    "nile:teleconnections": "node -e \"import('./src/adapters/hydro-resilience/teleconnection-adapter.ts').then(m => new m.TeleconnectionAdapter().getTeleconnectionSignals().then(console.log))\"",
-    "nile:stress": "node -e \"import('./src/adapters/hydro-resilience/institutional-stress-adapter.ts').then(m => new m.InstitutionalStressAdapter().getStressProxies('Mediterranean').then(console.log))\"",
+    "nile:hvi": "node --loader ts-node/esm -e \"import('./src/adapters/hydro-variance.ts').then(m=>console.log(m.calculateHVI({region:'Nile-Delta',values:[4500,4600,4400,3800,4200,3900,3700]})))\"",
+    "nile:blr": "node --loader ts-node/esm -e \"import('./src/adapters/buffer-load.ts').then(m=>console.log(m.calculateBLR({storage:150,demand:200})))\"",
+    "nile:teleconnections": "node --loader ts-node/esm -e \"import('./src/adapters/teleconnection-watch.ts').then(m=>console.log(m.calculateImpactScore({enso:1.2,iod:-0.8,nao:0.5,region:'Nile'})))\"",
+    "nile:stress": "node --loader ts-node/esm -e \"import('./src/adapters/institutional-stress.ts').then(m=>console.log(m.calculateStress({priceAnomaly:15.3,harvestAnomaly:10,supplyChainDelay:4})))\"",
     "nile:full:check": "npm run nile:hvi && npm run nile:blr && npm run nile:teleconnections && npm run nile:stress",
     "nile:prometheus": "npm run nile:metrics &",
     "crep:nile:check": "node tools/governance/crep-guardrails.mjs && node -e \"console.log('🌊 Nil-Weisheit CREP-konform')\"",
@@ -28,7 +28,9 @@
     "pino-http": "^8.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-    "zod": "^4.1.5"
+    "zod": "^4.1.5",
+    "cors": "^2.8.5",
+    "simple-statistics": "^7.8.3"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",

@@ -7,6 +7,8 @@ status:
   pino_logging: done
   hydro_adapters: done
   institutional_stress: done
+  sigil_mappings: done
+  hydro_diagram: done
   prometheus_metrics: done
 next:
   - sigillin_gallery

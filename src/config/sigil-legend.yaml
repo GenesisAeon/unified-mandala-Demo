@@ -1,0 +1,16 @@
+hydro:
+  variance:
+    "🟢": "HVI < 0.3 (stabile Varianz)"
+    "🟠": "0.3 ≤ HVI < 0.6 (erhöht)"
+    "🔴": "HVI ≥ 0.6 (kritisch)"
+  buffer:
+    "💧": "BLR ≥ 1.2 (Puffer ausreichend)"
+    "🚨": "0.8 < BLR < 1.2 (Warnstufe)"
+    "🧯": "BLR ≤ 0.8 (Defizit)"
+teleconnection:
+  "🛰️": "starke Fernwirkung (Impact > 1.5)"
+  "🌍": "geringe Fernwirkung"
+stress:
+  "📊": "niedrig"
+  "📉": "mittel"
+  "📈": "hoch"

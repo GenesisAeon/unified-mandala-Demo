@@ -1,0 +1,8 @@
+flowchart TD
+  A[ERA5/USGS Streams] -->|Abfluss-Serie| B[HVI = σ/μ]
+  A -->|Speicher/Bedarf| C[BLR = S/D]
+  D[ENSO/IOD/NAO] --> E[Teleconnection-Watch]
+  B -->|Sigil| F[UI KPI-Karten]
+  C -->|Sigil| F
+  E -->|Sigil| F
+  F --> G[CREP-Resonanzkarte 🟢/🟠/🔴]

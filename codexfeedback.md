@@ -10,6 +10,8 @@
 - [x] Hydro resilience adapters (HVI, BLR, Teleconnection)
 - [x] Institutional stress adapter and API router scaffolding
 - [x] Prometheus metrics with beacon heartbeat
+- [x] Function-based hydro adapters and sigil mappings (HVI/BLR/Tele/Stress)
+- [x] Hydro monitoring diagram (docs/diagrams/hydro-monitoring.mmd)
 - [x] Tests and CI guardrails (CREP)
 - [x] Alignment capsule (config/alignment-capsule.yaml)
 - [x] Fraktal1 ledger entry (2025-09-08, sigil 🫀)
