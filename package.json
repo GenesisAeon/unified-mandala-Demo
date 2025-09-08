@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "express": "^4.19.2",
-    "yaml": "^2.5.1"
+    "yaml": "^2.5.1",
+    "pino": "^8.17.0",
+    "pino-http": "^8.4.0"
   }
 }
