@@ -25,9 +25,14 @@
 - [x] Hydro-resilience GET router & API wiring
 - [x] Metrics dev script with Prometheus /metrics
 - [x] Program flow diagram & release gate docs
+- [x] Live data sources (NOAA/USGS)
+- [x] Mini-Metrics-Dashboard ausgebaut
+- [x] Docs Bundle weiter verfeinert
+- [x] QGW Dashboard-Integration
 
 ## Notes for Next Fraktal
-- Live data sources (NOAA/USGS)
-- Mini-Metrics-Dashboard ausbauen
-- Docs Bundle weiter verfeinern
-- Weitere QGW Tiles & Dashboard-Integration
+- Grafana Dashboard
+- Sigillin Gallery erweitern
+- Live Teleconnection Feed (IOD/NAO)
+- BLR Live (ERA5/Reservoir)
+- Windows Wrapper & Mermaid-Skizze

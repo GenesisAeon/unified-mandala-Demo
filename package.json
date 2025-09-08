@@ -27,7 +27,11 @@
     "pages:deploy": "gh-pages -d public",
     "postinstall": "node -e \"try{require('fs').mkdirSync('public/gallery',{recursive:true})}catch{}\"",
     "ci:smoke": "node tools/smoke/healthz.mjs && node tools/smoke/kpis.mjs",
-    "demo:hydro": "node -e \"console.log('HVI/BLR/Tele live…');\""
+    "demo:hydro": "node -e \"console.log('HVI/BLR/Tele live…');\"",
+    "test:live": "vitest run -t hvi-live",
+    "metrics:mini": "node tools/metrics/patch-metrics.mjs",
+    "docs:serve": "npx http-server docs -p 4100",
+    "smoke": "node tools/smokes/healthz.mjs && node tools/smokes/kpis.mjs"
   },
   "dependencies": {
     "dayjs": "^1.11.18",

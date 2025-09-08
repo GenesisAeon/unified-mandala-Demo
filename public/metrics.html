@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"/>
+<title>Mandala Mini Metrics</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body>
+<h2>Hydro-Variance Index (HVI)</h2>
+<canvas id="hvi"></canvas>
+<h2>Teleconnection (ENSO)</h2>
+<pre id="enso"></pre>
+<script>
+(async function(){
+  const r = await fetch("/api/metrics/snapshot"); const {hvi, tele} = await r.json();
+  const ctx = document.getElementById("hvi");
+  new Chart(ctx,{type:"bar",data:{labels:["HVI"],datasets:[{label:hvi.site,data:[hvi.hvi]}]},options:{scales:{y:{beginAtZero:true}}}});
+  document.getElementById("enso").textContent = JSON.stringify(tele[0], null, 2);
+}());
+</script>
+</body>

@@ -9,15 +9,18 @@
     "hydro_router_get": "done",
     "metrics_dev_script": "done",
     "release_gate_docs": "done",
-    "programflow_svg": "done"
+    "programflow_svg": "done",
+    "live_data_sources": "done",
+    "mini_metrics_dashboard": "done",
+    "docs_bundle_refine": "done",
+    "qgw_dashboard_integration": "done"
   },
   "next": [
-    "live_data_sources",
-    "mini_metrics_dashboard",
-    "docs_bundle_refine",
-    "qgw_dashboard_integration",
     "grafana_dashboard",
     "sigillin_gallery",
-    "live_teleconnection_feed"
+    "live_teleconnection_feed",
+    "blr_live",
+    "windows_wrapper",
+    "mermaid_sketch"
   ]
 }
