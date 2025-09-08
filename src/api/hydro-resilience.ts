@@ -1,4 +1,6 @@
 import { Router } from "express";
+import { getHVIFromUSGS } from "../adapters/hydro-resilience/hvi-live";
+import { getTeleconnectionsLive } from "../adapters/hydro-resilience/tele-live";
 
 const router = Router();
 
@@ -26,6 +28,16 @@ router.get("/teleconnections", (_req, res) => {
   const oni = (Math.random()*2-1)*1.5;
   const score = Math.min(Math.abs(oni)*0.3 + 0.2, 1);
   res.json({ success:true, data:[{ index:"ENSO", phase: oni<-0.5?"La Niña":oni>0.5?"El Niño":"Neutral", strength:oni, impact_score:score, sigil:"🛰️", forecast_days:90, timestamp:new Date().toISOString() }]});
+});
+
+router.get("/live/hvi/:site", async (req, res) => {
+  try { res.json({ success: true, data: await getHVIFromUSGS(req.params.site) }); }
+  catch (e:any) { res.status(502).json({ success:false, error: e.message }); }
+});
+
+router.get("/live/teleconnections", async (_req, res) => {
+  try { res.json({ success: true, data: await getTeleconnectionsLive() }); }
+  catch (e:any) { res.status(502).json({ success:false, error: e.message }); }
 });
 
 export { router as hydroResilienceRouter };

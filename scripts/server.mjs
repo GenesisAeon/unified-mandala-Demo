@@ -9,6 +9,8 @@ import pinoHttp from 'pino-http';
 const require = createRequire(import.meta.url);
 require('ts-node').register({ transpileOnly: true, compilerOptions: { allowImportingTsExtensions: true, module: 'commonjs' } });
 const { hydroResilienceRouter } = require('../src/api/hydro-resilience.ts');
+const { metricsSnapshot } = require('../src/api/routes/metrics-snapshot.ts');
+const { qgw } = require('../src/api/routes/qgw.ts');
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -28,6 +30,8 @@ app.use((req, res, next) => {
 
 // ---- API Routes
 app.use('/api/hydro', hydroResilienceRouter);
+app.use('/api/metrics', metricsSnapshot);
+app.use('/api/qgw', qgw);
 
 const DATA = path.join(__dirname, '../data');
 app.get('/api/kpi/list', (_req, res) => {

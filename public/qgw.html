@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"/>
+<title>QGW Tile</title>
+<style>body{font-family:system-ui;padding:24px}</style>
+<h2>QGW Dataset</h2><pre id="out"></pre>
+<script>
+fetch("/api/qgw").then(r=>r.json()).then(d=>{document.getElementById("out").textContent=JSON.stringify(d.data,null,2)});
+</script>
