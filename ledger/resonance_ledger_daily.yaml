@@ -3,3 +3,8 @@
   focus: ["First-Start thin-slice","Sigil → KPI → UI Atem"]
   sigil: "🌀"
   note: "Ruhig und klar. Kein Druck, nur Richtung."
+- date: "2025-09-08"
+  intent: "Fraktal1 Implementation"
+  focus: ["Docs verfeinert","Ledger aktualisiert"]
+  sigil: "🫀"
+  note: "Alignment capsule übernommen; bereit für nächste Iteration."
