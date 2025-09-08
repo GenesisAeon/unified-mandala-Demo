@@ -1,0 +1,9 @@
+hvi_thresholds:
+  stable: 0.3
+  elevated: 0.6
+  critical: 1.0
+
+regions:
+  - Nile-Delta
+  - Rhine-Basin
+  - Colorado-Basin

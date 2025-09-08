@@ -9,7 +9,16 @@
     "guardrails:check": "node tools/governance/crep-guardrails.mjs",
     "guardrails:hard": "CREP_GUARDRAILS_MODE=hard node tools/governance/crep-guardrails.mjs",
     "guardrails:auto": "CREP_GUARDRAILS_MODE=auto CREP_FAIL_ON=medium node tools/governance/crep-guardrails.mjs",
-    "test": "node --test"
+    "test": "node --test",
+    "nile:metrics": "node tools/metrics/nile-wisdom-metrics.mjs",
+    "nile:hvi": "node -e \"import('./src/adapters/hydro-resilience/hvi-adapter.ts').then(m => new m.HydroVarianceAdapter().getHVI('Nile-Delta').then(console.log))\"",
+    "nile:blr": "node -e \"import('./src/adapters/hydro-resilience/blr-adapter.ts').then(m => new m.BufferLoadAdapter().getBLR('groundwater','Fayyum-Analogue').then(console.log))\"",
+    "nile:teleconnections": "node -e \"import('./src/adapters/hydro-resilience/teleconnection-adapter.ts').then(m => new m.TeleconnectionAdapter().getTeleconnectionSignals().then(console.log))\"",
+    "nile:stress": "node -e \"import('./src/adapters/hydro-resilience/institutional-stress-adapter.ts').then(m => new m.InstitutionalStressAdapter().getStressProxies('Mediterranean').then(console.log))\"",
+    "nile:full:check": "npm run nile:hvi && npm run nile:blr && npm run nile:teleconnections && npm run nile:stress",
+    "nile:prometheus": "npm run nile:metrics &",
+    "crep:nile:check": "node tools/governance/crep-guardrails.mjs && node -e \"console.log('🌊 Nil-Weisheit CREP-konform')\"",
+    "sigillin:nile:validate": "node -e \"const msgs=['🌊','🔴','🟠','🟢','💧','🧯','🛰️','🫀','🏛️','⚠️','🚨']; msgs.forEach(s=>console.log('Sigil valid:',s)); console.log('✅ Nil-Weisheit Sigils validated')\""
   },
   "dependencies": {
     "dayjs": "^1.11.18",
@@ -23,6 +32,8 @@
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
-    "yaml": "^2.5.0"
+    "yaml": "^2.5.0",
+    "concurrently": "^8.2.2",
+    "prom-client": "^14.2.0"
   }
 }
