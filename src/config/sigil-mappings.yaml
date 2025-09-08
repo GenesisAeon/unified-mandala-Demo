@@ -1,0 +1,17 @@
+hydro:
+  variance:
+    low: "🟢"
+    medium: "🟠"
+    high: "🔴"
+    critical: "💀"
+  buffer:
+    safe: "💧"
+    warning: "🚨"
+    alert: "🧯"
+teleconnection:
+  strong: "🛰️"
+  weak: "🌍"
+stress:
+  low: "📊"
+  medium: "📉"
+  high: "📈"
