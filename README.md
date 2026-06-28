@@ -35,3 +35,41 @@ API testen: `/api/kpi/list`, `/api/crep/resonance`, `/api/hydro/hvi/Nile`
 - docs/PITCH.md – One-Pager
 - docs/demo/RELEASE-GATE.md – Demo-Checklist
 - docs/ProgramFlow.svg – Program-Flow
+
+## Installation
+This repo is primarily a Node.js/TypeScript application (no published
+PyPI package yet):
+```bash
+pnpm install
+```
+A `pyproject.toml` is included for GenesisAeon ecosystem release tooling
+consistency, but `pip install unified-mandala-demo` is not yet meaningful
+since there is no Python source to package.
+
+## Usage / Quick Start
+```bash
+pnpm install
+pnpm start
+# then:
+curl http://localhost:3000/api/kpi/list
+curl http://localhost:3000/api/crep/resonance
+curl http://localhost:3000/api/hydro/hvi/Nile
+```
+
+## Role in the GenesisAeon Ecosystem
+`unified-mandala-Demo` (P-MANDALA-DEMO) is the demo/visualization layer
+for `unified-mandala`, exposing its CREP/Sigillin/EventBus concepts
+through a runnable API and UI for onboarding and presentation purposes.
+
+## Citation
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.PLACEHOLDER.svg)](https://doi.org/10.5281/zenodo.PLACEHOLDER)
+
+DOI will be assigned automatically on first GitHub Release once
+Zenodo–GitHub integration is enabled for this repo.
+
+## License
+Dual-licensed:
+- Source code: GPL-3.0-or-later — see [LICENSE-CODE](./LICENSE-CODE)
+- Documentation: CC BY 4.0 — see [LICENSE-DOCS](./LICENSE-DOCS)
+
+See [LICENSE](./LICENSE) for details.
