@@ -10,7 +10,6 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: "20", cache: "pnpm" }
       - run: pnpm i
-      - run: pnpm build || true
       - run: |
           pnpm start &
           npx wait-on http://localhost:3000/healthz -t 30000

@@ -1,6 +1,6 @@
 {
   "title": "unified-mandala-demo — P-MANDALA-DEMO: Demo/visualization for unified-mandala",
-  "description": "<p>Demo/visualization layer for unified-mandala: a holistic, modular framework for symbolic AI, CREP logic, and ethical agent workflows.</p><p>Part of the <strong>GenesisAeon</strong> ecosystem (P-MANDALA-DEMO, domain: demo/visualization for unified-mandala).</p><p>See <a href=\"https://github.com/GenesisAeon/unified-mandala-Demo\">github.com/GenesisAeon/unified-mandala-Demo</a> for source, documentation, and reproducibility notebooks.</p>",
+  "description": "<p>Demo/visualization layer for unified-mandala: a holistic, modular framework for symbolic AI, CREP logic, and ethical agent workflows.</p><p>Part of the <strong>GenesisAeon</strong> ecosystem (P-MANDALA-DEMO, domain: demo/visualization for unified-mandala).</p><p>This repository is dual-licensed: source code under GPL-3.0-or-later, documentation under CC BY 4.0 (see LICENSE-CODE / LICENSE-DOCS). The Zenodo \"license\" field below reflects the code license, since this archive captures the software artifact.</p><p>See <a href=\"https://github.com/GenesisAeon/unified-mandala-Demo\">github.com/GenesisAeon/unified-mandala-Demo</a> for source, documentation, and reproducibility notebooks.</p>",
   "creators": [
     {
       "name": "Römer, Johann",
