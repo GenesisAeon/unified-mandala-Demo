@@ -1,0 +1,9 @@
+LICENSE
+LICENSE-CODE
+LICENSE-DOCS
+README.md
+pyproject.toml
+unified_mandala_demo.egg-info/PKG-INFO
+unified_mandala_demo.egg-info/SOURCES.txt
+unified_mandala_demo.egg-info/dependency_links.txt
+unified_mandala_demo.egg-info/top_level.txt
