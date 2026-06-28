@@ -1,6 +1,7 @@
 {
   "name": "unifiedmandala-lite",
   "private": true,
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "start": "node scripts/server.mjs",
     "dev": "concurrently \"node --watch scripts/server.mjs\" \"npm run metrics:serve\"",

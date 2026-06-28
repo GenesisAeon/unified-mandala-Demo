@@ -1,0 +1,33 @@
+{
+  "title": "unified-mandala-demo — P-MANDALA-DEMO: Demo/visualization for unified-mandala",
+  "description": "<p>Demo/visualization layer for unified-mandala: a holistic, modular framework for symbolic AI, CREP logic, and ethical agent workflows.</p><p>Part of the <strong>GenesisAeon</strong> ecosystem (P-MANDALA-DEMO, domain: demo/visualization for unified-mandala).</p><p>See <a href=\"https://github.com/GenesisAeon/unified-mandala-Demo\">github.com/GenesisAeon/unified-mandala-Demo</a> for source, documentation, and reproducibility notebooks.</p>",
+  "creators": [
+    {
+      "name": "Römer, Johann",
+      "affiliation": "Independent Researcher / MOR Research Collective"
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "GenesisAeon",
+    "P-MANDALA-DEMO",
+    "demo/visualization",
+    "UTAC",
+    "CREP",
+    "open science"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.19645351",
+      "relation": "isPartOf",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    }
+  ],
+  "version": "1.0.0",
+  "communities": [
+    { "identifier": "genesisaeon" }
+  ]
+}
