@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "unified-mandala-demo"
-version = "1.0.0"
+version = "1.0.1"
 description = "Demo/visualization layer for unified-mandala: a holistic, modular framework for symbolic AI, CREP logic, and ethical agent workflows."
 authors = [{ name = "Johann Römer" }]
 license = { text = "GPL-3.0-or-later" }
@@ -12,5 +12,6 @@ requires-python = ">=3.10"
 readme = "README.md"
 dependencies = []
 
-[tool.setuptools]
-packages = []
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["unified_mandala_demo*"]
