@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "unified-mandala-demo"
+version: "1.0.1"
+date-released: "2026-07-01"
+authors:
+  - family-names: Römer
+    given-names: Johann
+repository-code: "https://github.com/GenesisAeon/unified-mandala-Demo"
+license: GPL-3.0-or-later
+abstract: "Demo/visualization layer for unified-mandala: a holistic, modular framework for symbolic AI, CREP logic, and ethical agent workflows."
+keywords:
+  - GenesisAeon
+  - UTAC
+  - CREP
+  - open-science
