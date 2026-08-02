@@ -1,5 +1,7 @@
 # 🜂 UnifiedMandala — Kurz-README (Präsentationsfähig)
 
+**GenesisAeon Package P69**
+
 > „Ein Betriebssystem, das atmet – ein Mandala, das denkt.“
 
 **Zweck dieses Repos**  
@@ -57,7 +59,7 @@ curl http://localhost:3000/api/hydro/hvi/Nile
 ```
 
 ## Role in the GenesisAeon Ecosystem
-`unified-mandala-Demo` (P-MANDALA-DEMO) is the demo/visualization layer
+`unified-mandala-Demo` (P69, formerly informally "P-MANDALA-DEMO") is the demo/visualization layer
 for `unified-mandala`, exposing its CREP/Sigillin/EventBus concepts
 through a runnable API and UI for onboarding and presentation purposes.
 
